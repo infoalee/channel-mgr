@@ -24,8 +24,6 @@
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="vendor/jquery/jquery.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -46,13 +44,16 @@
   ?>
 </nav>
 <!-- nav -->
-
+<div id="baseview">
+</div>
     <?
-    include "newtask2.php";
+    //include "dashboard.php";
     ?>
 
   </div>
   <!-- /#wrapper -->
+
+    
   <!-- jQuery -->
   <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -69,6 +70,10 @@
 
   <!-- Custom Theme JavaScript -->
   <script src="dist/js/sb-admin-2.js"></script>
+
+  <script>
+      $('#baseview').load('./_view/dashboard.php');
+    </script>
 </body>
 
 </html>
