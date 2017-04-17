@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" id="lnkBooking">
+                        <a href="#/booking" id="lnkBooking">
                             <div class="panel-footer">
                                 <span class="pull-left">Booking Here</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="#/myslot">
                             <div class="panel-footer">
                                 <span class="pull-left">Check my slot</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
