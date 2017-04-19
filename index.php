@@ -11,6 +11,8 @@
 
     <title>Channel Management</title>
 
+    <link rel="shortcut icon" href="images/kbank.ico"/>
+    
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -19,12 +21,14 @@
 
     <!-- Custom CSS -->
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="dist/css/my-style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
+
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -32,8 +36,12 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="vendor/metisMenu/metisMenu.min.js"></script>
 
+
     <!-- Custom Theme JavaScript -->
     <script src="dist/js/sb-admin-2.js"></script>
+
+    <script src="_controller/index.js"></script>
+    <script src="./_controller/page_loading.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,16 +53,18 @@
 </head>
 
 <body>
-  <script>
-  					$(document).ready(function(){
-  						$("#baseview").load("login.php");
-              $("#nav_navbar").load("nav_navbar.php?login=0");
-  					});
-  </script>
-  <nav>
-      <div id="nav_navbar"></div>
-  </nav>
-      <div id="baseview"></div>
+<!-- #wrapper -->
+<div id="wrapper">
+  <div class="modal-loading"><i class="fa fa-spinner fa-spin modal-loading-center" style="font-size:70px"></i></div>
+
+<!-- Navigation -->
+<nav class="nav navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <? include "nav_navhead.php";?>
+</nav>
+
+    <div id="baseview"></div>
+
+</div>
 
 
 

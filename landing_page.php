@@ -1,3 +1,7 @@
+<?
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +14,8 @@
     <meta name="author" content="">
 
     <title>Channel Management</title>
+
+    <link rel="shortcut icon" href="images/kbank.ico"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -24,6 +30,12 @@
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <script src="vendor/jquery/jquery.js"></script>
+
+
+
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,31 +47,68 @@
 
 <body>
   <!-- #wrapper -->
-  <div id="wrapper">
-<!-- nav -->
-<nav>
+<div id="wrapper">
+  <div class="modal-loading"><i class="fa fa-spinner fa-spin modal-loading-center" style="font-size:70px"></i></div>
+
+<!-- Navigation -->
+<nav class="nav navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
   <?
+  include "nav_navhead.php";
   include "nav_navbar.php";
   include "nav_sidebar.php";
   ?>
 </nav>
 <!-- nav -->
-<div id="baseview">
+
+    <div id="baseview"></div>
+
+ <!-- Modal  confrim Logout -->
+		 <div class="modal fade" id="logoutModal" role="dialog">
+			<div class="modal-dialog modal-md">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Confrim Logout <span class="glyphicon glyphicon-question-sign"></span> </h4>
+
+				</div>
+				<div class="modal-body">
+				  <p class="text-warning"><span class="glyphicon glyphicon-exclamation-sign"></span> คุณต้อการออกจากระบบ หากต้องการเข้าสู่ระบบ กรุณา Login ใหม่. Are you sure?</p>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" id="myButtonLogoutCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  <button type="button" id="myButtonLogout"  class="btn btn-primary" autocomplete="off">Confirm</button>
+
+					<script>
+					  $('#myButtonLogout').on('click', function () {
+							//$(this).button('complete') // button text will be "finished!"
+							//alert(1)
+							$(this).button('loading');
+							$('#myButtonLogoutCancel').button('loading');
+							$('.modal-loading').show().delay(500).queue(function(){
+								window.location = './_model/func-logout.php';
+							});
+
+					  });
+					</script>
+
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		 <!-- Modal  confrim Logout -->
 </div>
-    <?
-    //include "dashboard.php";
-    ?>
-
-  </div>
   <!-- /#wrapper -->
-
-    
-  <!-- jQuery -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="./_controller/nav_sidebar.js"></script>
-
+  <script src="dist/js/jquery.session.js"></script>
+  <script src='_controller/landing_page.js'></script>
+  <script src="_controller/page_loading.js"></script>
+  
+  
   <!-- Bootstrap Core JavaScript -->
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="_controller/nav_sidebar.js"></script>
+  
 
   <!-- Metis Menu Plugin JavaScript -->
   <script src="vendor/metisMenu/metisMenu.min.js"></script>
@@ -72,9 +121,8 @@
   <!-- Custom Theme JavaScript -->
   <script src="dist/js/sb-admin-2.js"></script>
 
-  <script>
-      $('#baseview').load('./_view/dashboard.php');
-    </script>
+
+
 </body>
 
 </html>
