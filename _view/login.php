@@ -1,6 +1,6 @@
 	<!-- Contact Form JavaScript -->
 	<script src="./dist/js/jqBootstrapValidation.js"></script>
-	<script src="./_controller/check-login.js"></script>
+	
     <script src="./_controller/login.js"></script>
 
 

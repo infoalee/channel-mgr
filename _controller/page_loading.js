@@ -19,3 +19,13 @@ $(document).on({
 	ajaxStart:  function() { $('.modal-loading').show();  },
 	ajaxStop:   function() { $('.modal-loading').hide(); }
 });
+
+
+    var updateLinkActive = function(url) {
+
+        $('ul.nav a').removeClass('active').parent();
+        var element = $('ul.nav a').filter(function() {
+            return this.href == url;
+        }).addClass('active').parent();;
+
+    }

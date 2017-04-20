@@ -31,8 +31,20 @@ session_start();
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <script src="vendor/jquery/jquery.js"></script>
+    <link href="./vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
+    <script src="./vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script>
+    
+      var show_dashboard = function(){
+          $("#baseview").empty();
+          $("#baseview").load("./_view/dashboard.php");  
 
-
+      }
+      var show_booing = function(){
+          $("#baseview").empty('');
+          $("#baseview").load("./_view/newtask.php");  
+      }
+    </script>
 
 
 
@@ -100,27 +112,18 @@ session_start();
 		 <!-- Modal  confrim Logout -->
 </div>
   <!-- /#wrapper -->
-  <script src="dist/js/jquery.session.js"></script>
-  <script src='_controller/landing_page.js'></script>
-  <script src="_controller/page_loading.js"></script>
+
   
   
   <!-- Bootstrap Core JavaScript -->
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="_controller/nav_sidebar.js"></script>
   
-
-  <!-- Metis Menu Plugin JavaScript -->
-  <script src="vendor/metisMenu/metisMenu.min.js"></script>
-
-  <!-- Morris Charts JavaScript -->
-  <script src="vendor/raphael/raphael.min.js"></script>
-  <script src="vendor/morrisjs/morris.min.js"></script>
-  <script src="data/morris-data.js"></script>
-
   <!-- Custom Theme JavaScript -->
   <script src="dist/js/sb-admin-2.js"></script>
-
+  <script src="dist/js/jquery.session.js"></script>
+  <script src='_controller/landing_page.js'></script>
+  <script src="_controller/page_loading.js"></script>
 
 
 </body>

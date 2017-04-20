@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^([^:]+)(:[0-9]+)?$
+RewriteRule (.*) https://%1%{REQUEST_URI}.
+RewriteRule ^home$ index.php
+RewriteRule ^access_denined$ access_denined_page.php
+RewriteRule ^landing_page$ landing_page.php
+#Disable to show directory
+Options -Indexes	

@@ -55,7 +55,7 @@ $(function() {
 							*/
 							//$.session.set("home","landing_page.php?bp=1");
 
-                            window.location = 'landing_page.php';
+                            window.location = 'landing_page';
 
 					}else if(trimStr(data)=='X'){
 							$('#success').html("<div class='alert alert-danger'>");

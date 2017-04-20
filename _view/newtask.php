@@ -1,6 +1,4 @@
 
-<link href="./vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
-<script src="./vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script src="./dist/js/jqBootstrapValidation.js"></script>
 <script src="./_controller/newtask.js"></script>
 <script src="./_controller/newtask1.js"></script>
@@ -28,43 +26,39 @@
 
                                     <div class="row">
                                       <div class="form-group">
-                                        <div class="col-md-1">
+                                        <div class="col-md-1 col-lg-2">
                                         </div>
-                                          <div class="col-md-3">
+                                          <div class="col-md-3 col-lg-2">
                                             <label class="control-label inline">Campaign Code :</label>
                                           </div>
-                                          <div class="col-md-2 text-left">
+                                          <div class="col-md-3 col-lg-2 text-left">
                                             <input class="form-control inline UpperCase" id="campaigncode" placeholder="Code." maxlength="9"  required data-validation-required-message="Please enter to Search"  size="9" style="max-width:150px;">
                                             <p class="help-block"></p>
                                           </div>
-                                          <div class="col-md-1 text-left control">
+                                          <div class="col-md-1 col-lg-2 text-left control">
                                             <button class="btn btn-sm btn-info" id="btnCampaingChk"><span class="fa fa-check-square-o"></span> Check!</button>
                                           </div>
-                                          <div class="col-md-2 text-right s-control">
-                                            <label class="control-label inline">Campaign Type :</label>
+                                          <div class="col-md-3 col-lg-1 s-control">
+                                            <label class="control-label inline">Type :</label>
                                           </div>
-                                          <div class="col-lg-2 text-left s-control">
+                                          <div class="col-md-2 col-lg-2 text-left s-control">
                                             <select name="select" id="select" class="form-control selectpicker inline">
                                               <option>Targeted</option>
                                               <option>Informative</option>
                                               <option>Other</option>
                                             </select>
                                           </div>
-                                          
-
-
-
                                       </div>
                                     </div>
 
                                     <div class="row s-control">
                                       <div class="form-group">
-                                        <div class="col-md-1">
+                                        <div class="col-md-1 col-lg-2">
                                         </div>
-                                          <div class="col-md-3">
+                                          <div class="col-md-3 col-lg-2">
                                             <label class="control-label inline">Campaign Name :</label>
                                           </div>
-                                          <div class="col-md-6 text-left">
+                                          <div class="col-md-3 col-lg-6 text-left">
                                             <input class="form-control inline" id="campaignName" placeholder="Campaign Name." maxlength="100"  required data-validation-required-message="Please enter to Search">
                                             <p class="help-block"></p>
                                           </div>
@@ -74,12 +68,12 @@
 
                                     <div class="row s-control">
                                       <div class="form-group">
-                                        <div class="col-md-1">
+                                        <div class="col-md-1 col-lg-2">
                                         </div>
-                                          <div class="col-md-3">
+                                          <div class="col-md-3 col-lg-2">
                                             <label class="control-label inline">Product :</label>
                                           </div>
-                                          <div class="col-md-3">
+                                          <div class="col-md-3 col-lg-3">
                                             <select id="slProduct " class="form-control selectpicker inline">
                                               <option value="BA">BA</option>
                                               <option value="CC">CC</option>
@@ -96,12 +90,12 @@
 
                                       <div class="row s-control">
                                         <div class="form-group">
-                                          <div class="col-md-1">
+                                          <div class="col-md-1 col-lg-2">
                                           </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-lg-2">
                                               <label class="control-label inline">Objective :</label>
                                             </div>
-                                            <div class="col-md-6 text-left">
+                                            <div class="col-md-6 col-lg-6 text-left">
                                               <input class="form-control inline" id="campaignObj" placeholder="Objective."  required data-validation-required-message="Please enter to Search">
                                               <p class="help-block"></p>
                                             </div>
@@ -129,15 +123,15 @@
                                             <div class="col-md-3">
                                               <label class="control-label inline">Campaign Periods :</label>
                                             </div>
-                                              <label for="name" class="col-lg-1">From:</label>
-                                                <div class="col-lg-2">
+                                              <label for="name" class="col-md-1 col-lg-1">From:</label>
+                                                <div class="col-md-2 col-lg-2">
                                                     <input type="text" class="form-control" name="from-dt" id="from-dt">
                                                     <p class="help-block"></p>
                                                 </div>
                                               
   
-                                              <label for="name" class="col-lg-1">To:</label>
-                                                <div class="col-lg-2">
+                                              <label for="name" class="col-md-1 col-lg-1">To:</label>
+                                                <div class="col-md-2 col-lg-2">
                                                     <input type="text" class="form-control" name="to-dt" id="to-dt">
                                                     <p class="help-block"></p>
                                                 </div>

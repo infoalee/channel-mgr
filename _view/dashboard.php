@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">12</div>
-                                    <div>My Slot!</div>
+                                    <div>Comfrimed Slot!</div>
                                 </div>
                             </div>
                         </div>
