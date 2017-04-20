@@ -19,7 +19,10 @@ $check_err="";//ตรวจสอบการ Error
 
 			$username = $tUsername;//$_POST["username"];
 			$pass = $tPassword;//$_POST["password"];
-
+// bypass test
+echo iconv('TIS-620', 'UTF-8','Y'); 
+$_SESSION["LOGIN_ID"] = $username;
+exit();
 				if($username !=null and $pass !=null){// check username  And password not null 2
 							$server = " 10.209.60.60"; //dc1-nu
 							$user = $username."@kasikornbank.com";

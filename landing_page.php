@@ -123,7 +123,7 @@ session_start();
   <script src="dist/js/sb-admin-2.js"></script>
   <script src="dist/js/jquery.session.js"></script>
   <script src='_controller/landing_page.js'></script>
-  <script src="_controller/page_loading.js"></script>
+  <script src="_controller/page_function.js"></script>
 
 
 </body>
