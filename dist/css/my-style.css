@@ -128,3 +128,21 @@
 .panel-peterriver>a:hover {
     color: #337ab7;
 }
+
+.panel-wetasphalt {
+    border-color: #34495e;
+}
+
+.panel-wetasphalt>.panel-heading {
+    border-color: #34495e;
+    color: white;
+    background-color: #34495e;
+}
+
+.panel-wetasphalt>a {
+    color: #34495e;
+}
+
+.panel-wetasphalt>a:hover {
+    color: #337ab7;
+}

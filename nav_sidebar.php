@@ -60,7 +60,7 @@
                                   <a href="#"><i class="fa fa-user"></i> Users Control</a>
                               </li>
                               <li class="side">
-                                  <a href="#"><i class="fa fa-server"></i> Fuction Control</a>
+                                  <a href="#"><i class="fa fa-server"></i> Function Control</a>
                               </li>
                           </ul>
                           <!-- /.nav-second-level -->
