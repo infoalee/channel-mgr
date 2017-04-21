@@ -21,13 +21,46 @@
                           <a href="#/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                       </li>
                       <li class="side">
-                          <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Menu<span class="fa arrow"></span></a>
+                          <a href=""><i class="fa fa-edit fa-fw"></i> Menu (AO/PM)<span class="fa arrow"></span></a>
                           <ul class="nav nav-second-level collapse in">
                               <li class="side">
                                   <a href="#/booking"><i class="fa fa-calendar-plus-o"></i> Booking</a>
                               </li>
                               <li class="side">
                                   <a href="#"><i class="fa fa-calendar-check-o"></i> Comfrimed Slot!</a>
+                              </li>
+                              <li class="side">
+                                  <a href="#"><i class="fa fa-cogs"></i> Manage Booking</a>
+                              </li>
+                          </ul>
+                          <!-- /.nav-second-level -->
+                      </li>
+                      <li class="side">
+                          <a href=""><i class="fa fa-wrench fa-fw"></i> Menu (Channel)<span class="fa arrow"></span></a>
+                          <ul class="nav nav-second-level collapse">
+                              <li class="side">
+                                  <a href="#"><i class="fa fa-commenting"></i> SMS Slot</a>
+                              </li>
+                              <li class="side">
+                                  <a href="#"><i class="fa fa-envelope-o"></i> Email Slot</a>
+                              </li>
+                              <li class="side">
+                                  <a href="#"><i class="glyphicon glyphicon-phone"></i> KMB Slot</a>
+                              </li>
+                          </ul>
+                          <!-- /.nav-second-level -->
+                        </li>
+                        <li class="side">
+                          <a href=""><i class="fa fa-wrench fa-fw"></i> Menu (Admin)<span class="fa arrow"></span></a>
+                          <ul class="nav nav-second-level collapse">
+                              <li class="side">
+                                  <a href="#"><i class="fa fa-files-o fa-fw"></i> Page Control</a>
+                              </li>
+                              <li class="side">
+                                  <a href="#"><i class="fa fa-user"></i> Users Control</a>
+                              </li>
+                              <li class="side">
+                                  <a href="#"><i class="fa fa-server"></i> Fuction Control</a>
                               </li>
                           </ul>
                           <!-- /.nav-second-level -->

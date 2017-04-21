@@ -57,11 +57,11 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-exclamation-triangle fa-5x"></i>
+                                    <i class="fa fa-cogs fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">124</div>
-                                    <div>Warning Slot!</div>
+                                    <div>Manage Booking!</div>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-info">
+                    <div class="panel panel-peterriver">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                  <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-warning">
+                    <div class="panel panel-alizarin">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-success">
+                    <div class="panel panel-emerald">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -163,7 +163,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div>               
 
             </div>
             <!-- /.row -->
