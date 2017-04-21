@@ -30,7 +30,7 @@ session_start();
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="vendor/jquery/jquery.js"></script>
+    <script src="./vendor/jquery/jquery.js"></script>
     <link href="./vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
     <script src="./vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
     <script>
@@ -43,6 +43,10 @@ session_start();
       var show_booing = function(){
           $("#baseview").empty('');
           $("#baseview").load("./_view/newtask.php");  
+      }
+      var show_calendar = function(){
+          $("#baseview").empty('');
+          $("#baseview").load("./_view/calendar.php");  
       }
     </script>
 

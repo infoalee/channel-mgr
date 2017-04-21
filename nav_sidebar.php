@@ -65,6 +65,9 @@
                           </ul>
                           <!-- /.nav-second-level -->
                       </li>
+                      <li class="side">
+                          <a href="#/calendar"><i class="fa fa-calendar fa-fw"></i> Calendar</a>
+                      </li>
                   </ul>
               </div>
               <!-- /.sidebar-collapse -->
