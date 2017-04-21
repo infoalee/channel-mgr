@@ -39,7 +39,7 @@
     <script src="dist/js/sb-admin-2.js"></script>
 
     <script src="_controller/index.js"></script>
-    <script src="./_controller/page_loading.js"></script>
+    <script src="./_controller/page_function.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
