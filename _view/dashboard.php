@@ -1,5 +1,17 @@
 <script src="./_controller/dashboard.js"></script>
-<div id="page-wrapper">
+<?
+include("../class.php");
+$dashboard = new Dashboard;
+//createMenuItem($pnStyle, $icon, $label, $detail, $notification, $href, $contentID)
+//**** New class database ****//
+$strHost = "127.0.0.1";
+$strDB = "ci_channel_mgt";
+$strUser = "root";
+$strPassword = "p@ssw0rd";
+$clsMyDB = new MySQLDatabase($strHost,$strDB,$strUser,$strPassword);
+
+?>
+    <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>
@@ -8,188 +20,62 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-calendar-plus-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>Booking!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#/booking" id="lnkBooking">
-                            <div class="panel-footer">
-                                <span class="pull-left">Booking Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-calendar-check-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>Comfrimed Slot!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#/myslot">
-                            <div class="panel-footer">
-                                <span class="pull-left">Check my slot</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-cogs fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>Manage Booking!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Check Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-calendar-times-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Reject Slot!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Check Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-peterriver">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-commenting fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>SMS Slot</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Check Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-alizarin">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-envelope-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Email Slot</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Check Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-emerald">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <!-- <i class="fa fa-mobile fa-5x"></i>-->
-                                   <span class="glyphicon glyphicon-phone fa-5x"></span>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>KMB Slot</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left ">Check Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right panel-success"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+<?
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-wetasphalt">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-server fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Function Control</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left ">Check Here</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right panel-success"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>                    
+//**** Call to function select record ****//
+$clsMyDB->strTable = "MENU_DASHBOARD";
+$clsMyDB->strCondition = " ID > 0 ";
+$objSelect = $clsMyDB->fncReturnResult();
+
+    while($row = @mysql_fetch_array($objSelect)){
+        $_pnStyle   = $row['PN_STYLE'];
+        $_icon      = $row['PN_ICON'];
+        $_label     = $row['NAME'];
+        $_detail    = $row['CLICK_NAME'];
+        $_notification = rand(1,100);
+        $_href      = $row['HREF'];
+        $_contentID = $row['CONTENT_ID'];
+
+        $elm = $dashboard -> createMenuItem($_pnStyle, $_icon, $_label, $_detail, $_notification, $_href, $_contentID);
+        echo $elm;
+    }
+
+            
+?> 
 
             </div>
             <!-- /.row -->
            
         </div>
         <!-- /#page-wrapper -->
+<?
+Class Dashboard {
+
+    function createMenuItem($pnStyle, $icon, $label, $detail, $notification, $href, $contentID){
+        $element =  "<div class='col-lg-3 col-md-6'>
+                    <div class='panel " . $pnStyle . "'>
+                        <div class='panel-heading'>
+                            <div class='row'>
+                                <div class='col-xs-3'>
+                                    <i class='fa " .$icon . " fa-5x'></i>
+                                </div>
+                                <div class='col-xs-9 text-right'>
+                                    <div class='huge'>" . $notification . "</div>
+                                    <div>" . $label . "</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href='" . $href . "' id='" . $contentID ."'>
+                            <div class='panel-footer'>
+                                <span class='pull-left'>" . $detail . "</span>
+                                <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
+                                <div class='clearfix'></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>";
+                return $element;
+    }
+}
+?>

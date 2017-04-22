@@ -74,7 +74,7 @@
 
 
 /* Add more panel color */
-
+/* Panel Style Emerald */
 .panel-emerald {
     border-color: #27ae60;
 }
@@ -93,6 +93,7 @@
     color: #3d8b3d;
 }
 
+/* Panel Style Alizarin */
 .panel-alizarin {
     border-color: #e74c3c;
 }
@@ -111,6 +112,7 @@
     color: #b52b27;
 }
 
+/* Panel Style Peter River */
 .panel-peterriver {
     border-color: #3498db;
 }
@@ -129,6 +131,7 @@
     color: #337ab7;
 }
 
+/* Panel Style Wet Asphalt */
 .panel-wetasphalt {
     border-color: #34495e;
 }
@@ -145,4 +148,42 @@
 
 .panel-wetasphalt>a:hover {
     color: #2c3e7d;
+}
+
+/* Panel Style Asbatos */
+.panel-asbatos {
+    border-color: #7f8c8d;
+}
+
+.panel-asbatos>.panel-heading {
+    border-color: #7f8c8d;
+    color: white;
+    background-color: #7f8c8d;
+}
+
+.panel-asbatos>a {
+    color: #7f8c8d;
+}
+
+.panel-asbatos>a:hover {
+    color: #2c3e7d;
+}
+
+/* Panel Style Silver */
+.panel-silver {
+    border-color: #bdc3c7;
+}
+
+.panel-silver>.panel-heading {
+    border-color: #bdc3c7;
+    color: white;
+    background-color: #bdc3c7;
+}
+
+.panel-silver>a {
+    color: #bdc3c7;
+}
+
+.panel-silver>a:hover {
+    color: #ecf0f1;
 }
