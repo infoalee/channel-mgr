@@ -43,6 +43,8 @@ $objSelect = $clsMyDB->fncReturnResult();
         $elm = $dashboard->createMenuItem();
         echo $elm;
     }     
+
+    $clsMyDB-> __destruct();
 ?> 
             </div>
             <!-- /.row -->

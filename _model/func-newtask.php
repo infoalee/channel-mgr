@@ -6,7 +6,7 @@ $db = new ODBC();
 // print "connecting to Composite"; 
 		if (!$db->connect("koc_db_prod","dmapp01" ,"dmapp01!")) 
 		{ 
-				 print "1.Error!\n Database Not Connect !!"; 
+				 echo "1.Error!\n Database Not Connect !!"; 
 				 exit(); 
 		} 
         if(isset($_POST['key_search'])){//เมื่อมีการส่งข้อมูลมา
