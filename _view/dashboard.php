@@ -2,7 +2,6 @@
 <?
 include("../class.php");
 $dashboard = new Dashboard;
-//createMenuItem($pnStyle, $icon, $label, $detail, $notification, $href, $contentID)
 //**** New class database ****//
 $strHost = "127.0.0.1";
 $strDB = "ci_channel_mgt";
@@ -22,8 +21,6 @@ $clsMyDB = new MySQLDatabase($strHost,$strDB,$strUser,$strPassword);
             <div class="row">
 
 <?
-
-
 if(isset($_GET['role'])){
     $_role = $_GET['role'];
 }else{
@@ -45,11 +42,8 @@ $objSelect = $clsMyDB->fncReturnResult();
 
         $elm = $dashboard->createMenuItem();
         echo $elm;
-    }
-
-            
+    }     
 ?> 
-
             </div>
             <!-- /.row -->
            
