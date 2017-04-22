@@ -37,7 +37,7 @@ session_start();
     
       var show_dashboard = function(){
           $("#baseview").empty();
-          $("#baseview").load("./_view/dashboard.php");  
+          $("#baseview").load("./_view/dashboard.php?role=<? echo $_SESSION['ROLE'];?>");  
 
       }
       var show_booing = function(){

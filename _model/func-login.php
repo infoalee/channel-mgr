@@ -13,6 +13,13 @@ $tUsername=$_POST['tUsername'];
 echo "error2";
 }
 
+/* Test login */
+$_SESSION["LOGIN_ID"] = $tUsername;
+$_SESSION["ROLE"] = $tPassword;
+echo iconv('TIS-620', 'UTF-8','Y'); 
+exit();
+/* Test login */
+
 $check_err="";//ตรวจสอบการ Error
 
 		if($tUsername!="" && $tPassword!="") {  // check username  And password not null 1

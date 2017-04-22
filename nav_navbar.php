@@ -190,7 +190,7 @@
               </li>
               <!-- /.dropdown -->
               <li class="invers">
-                Welcome:  <label class="FirstUpperCase"><? echo $_SESSION['LOGIN_ID']; ?></label>
+                Welcome:  <label class="FirstUpperCase"><? echo $_SESSION['LOGIN_ID'];?></label>
               </li>
               <li class="dropdown">
                   <a class="dropdown-toggle invers" data-toggle="dropdown" href="#">

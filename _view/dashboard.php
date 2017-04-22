@@ -23,21 +23,27 @@ $clsMyDB = new MySQLDatabase($strHost,$strDB,$strUser,$strPassword);
 
 <?
 
+
+if(isset($_GET['role'])){
+    $_role = $_GET['role'];
+}else{
+    $_role = 3;
+}
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
-$clsMyDB->strCondition = " ID > 0 ";
+$clsMyDB->strCondition = " ID > 0 And role=" . $_role;
 $objSelect = $clsMyDB->fncReturnResult();
 
     while($row = @mysql_fetch_array($objSelect)){
-        $_pnStyle   = $row['PN_STYLE'];
-        $_icon      = $row['PN_ICON'];
-        $_label     = $row['NAME'];
-        $_detail    = $row['CLICK_NAME'];
-        $_notification = rand(1,100);
-        $_href      = $row['HREF'];
-        $_contentID = $row['CONTENT_ID'];
+        $dashboard->pnStyle   = $row['PN_STYLE'];
+        $dashboard->icon      = $row['PN_ICON'];
+        $dashboard->label     = $row['NAME'];
+        $dashboard->detail    = $row['CLICK_NAME'];
+        $dashboard->notification = rand(1,100);
+        $dashboard->href      = $row['HREF'];
+        $dashboard->contentID = $row['CONTENT_ID'];
 
-        $elm = $dashboard -> createMenuItem($_pnStyle, $_icon, $_label, $_detail, $_notification, $_href, $_contentID);
+        $elm = $dashboard->createMenuItem();
         echo $elm;
     }
 
@@ -52,23 +58,23 @@ $objSelect = $clsMyDB->fncReturnResult();
 <?
 Class Dashboard {
 
-    function createMenuItem($pnStyle, $icon, $label, $detail, $notification, $href, $contentID){
+    function createMenuItem(){
         $element =  "<div class='col-lg-3 col-md-6'>
-                    <div class='panel " . $pnStyle . "'>
+                    <div class='panel " . $this->pnStyle . "'>
                         <div class='panel-heading'>
                             <div class='row'>
                                 <div class='col-xs-3'>
-                                    <i class='fa " .$icon . " fa-5x'></i>
+                                    <i class='fa " .$this->icon . " fa-5x'></i>
                                 </div>
                                 <div class='col-xs-9 text-right'>
-                                    <div class='huge'>" . $notification . "</div>
-                                    <div>" . $label . "</div>
+                                    <div class='huge'>" . $this->notification . "</div>
+                                    <div>" . $this->label . "</div>
                                 </div>
                             </div>
                         </div>
-                        <a href='" . $href . "' id='" . $contentID ."'>
+                        <a href='" . $this->href . "' id='" . $this->contentID ."'>
                             <div class='panel-footer'>
-                                <span class='pull-left'>" . $detail . "</span>
+                                <span class='pull-left'>" . $this->detail . "</span>
                                 <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
                                 <div class='clearfix'></div>
                             </div>
