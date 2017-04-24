@@ -1,5 +1,4 @@
  $(function() {
-
      $('a').click(function() {
          updateLinkActive(this.href);
          if (this.hash == '#/booking') {

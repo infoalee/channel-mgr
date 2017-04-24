@@ -28,9 +28,9 @@ if(isset($_SESSION["ROLE"])){
 $clsMyDB->strTable = "MENU_DASHBOARD";
 
 if($_role==1){
-    $conditions = " ID > 0 or ID =1";
+    $conditions = " ID > 0 or ID =1 order by ID";
 }else{
-    $conditions = " ID > 0 And role=$_role or ID =1";
+    $conditions = " ID > 0 And role=$_role or ID =1 order by ID";
 }
 
 $clsMyDB->strCondition = $conditions;
