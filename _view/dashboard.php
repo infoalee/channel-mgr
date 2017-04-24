@@ -28,7 +28,14 @@ if(isset($_GET['role'])){
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
-$clsMyDB->strCondition = " ID > 0 "; //And role=" . $_role;
+if($_role==1){
+    $conditions = " ID > 0";
+}else{
+    $conditions = " ID > 0 And role=" . $_role;
+}
+
+$clsMyDB->strCondition = $conditions;
+
 $objSelect = $clsMyDB->fncReturnResult();
 
     while($row = @mysql_fetch_array($objSelect)){

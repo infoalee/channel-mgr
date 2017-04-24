@@ -1,9 +1,9 @@
 function encode_pass(obj_pass) { //trim User-defined function
-	var key_encode='kbanknet';
-	var base64 = $.base64.encode(obj_pass.value, key_encode, true);
-	var val_pass;
-	val_pass = obj_pass.value + base64;
-	obj_pass.value = trimStr(val_pass);
+    var key_encode = 'kbanknet';
+    var base64 = $.base64.encode(obj_pass.value, key_encode, true);
+    var val_pass;
+    val_pass = obj_pass.value + base64;
+    obj_pass.value = trimStr(val_pass);
 }
 
 $(function() {
@@ -19,65 +19,65 @@ $(function() {
 
             var username = $("input#username").val();
             var pass = $("input#password").val();
-			//alert(check_username);
+            //alert(check_username);
             var firstName = username; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
+            //if (firstName.indexOf(' ') >= 0) {
+            //    firstName = name.split(' ').slice(0, -1).join(' ');
+            //}
             $.ajax({
                 url: "./_model/func-newtask.php",
                 type: "POST",
-              data: {tUsername : username, tPassword: pass},
+                data: { tUsername: username, tPassword: pass },
                 cache: false,
-				beforeSend:function(){
+                beforeSend: function() {
 
-				},
+                },
                 success: function(data) {
-					
-					// Enable button & show success message
-					$("#btnSubmit").attr("disabled", false);
-					//alert(trimStr(data));
-					
-					if(trimStr(data)=='Y'){
-							/* $('#success').html("<div class='alert alert-success'>");
-							$('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-								.append("</button>");
-							$('#success > .alert-success')
-								.append("<strong>Login Success</strong>");
-							$('#success > .alert-success')
-								.append('</div>');
-							*/
-							//$.session.set("home","landing_page.php?bp=1");
 
-                            window.location = 'landing_page.php';
+                    // Enable button & show success message
+                    $("#btnSubmit").attr("disabled", false);
+                    //alert(trimStr(data));
 
-					}else if(trimStr(data)=='X'){
-							$('#success').html("<div class='alert alert-danger'>");
-							$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-								.append("</button>");
-							$('#success > .alert-danger')
-								.append("<strong>ไม่สามารถ Login ได้ !!! <br /> Username : <span class='badge'>" +  username.toUpperCase()  +"</span> ไม่มีสิทธิ์เข้าใช้งานด้วย Computer เครื่องนี้ <br /> ติดต่อผู้ดูแลระบบ</strong>");
-							$('#success > .alert-danger')
-								.append('</div>');
+                    if (trimStr(data) == 'Y') {
+                        /* $('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        	.append("</button>");
+                        $('#success > .alert-success')
+                        	.append("<strong>Login Success</strong>");
+                        $('#success > .alert-success')
+                        	.append('</div>');
+                        */
+                        //$.session.set("home","landing_page.php?bp=1");
 
-							$('#username').focus
-					}else{
-							$('#success').html("<div class='alert alert-danger'>");
-							$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-								.append("</button>");
-							$('#success > .alert-danger')
-								.append("<strong>ไม่สามารถ Login ได้ !!! <br /> Username หรือ Password ไม่ถูกต้อง</strong>");
-							$('#success > .alert-danger')
-								.append('</div>');
+                        window.location = 'landing_page.php';
 
-							$('#username').focus
-					}
-							
+                    } else if (trimStr(data) == 'X') {
+                        $('#success').html("<div class='alert alert-danger'>");
+                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-danger')
+                            .append("<strong>ไม่สามารถ Login ได้ !!! <br /> Username : <span class='badge'>" + username.toUpperCase() + "</span> ไม่มีสิทธิ์เข้าใช้งานด้วย Computer เครื่องนี้ <br /> ติดต่อผู้ดูแลระบบ</strong>");
+                        $('#success > .alert-danger')
+                            .append('</div>');
+
+                        $('#username').focus
+                    } else {
+                        $('#success').html("<div class='alert alert-danger'>");
+                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-danger')
+                            .append("<strong>ไม่สามารถ Login ได้ !!! <br /> Username หรือ Password ไม่ถูกต้อง</strong>");
+                        $('#success > .alert-danger')
+                            .append('</div>');
+
+                        $('#username').focus
+                    }
+
 
                     //clear all fields
                     $('#loginForm').trigger("reset");
-					$('#username').focus
+                    $('#username').focus
 
                 },
                 error: function() {

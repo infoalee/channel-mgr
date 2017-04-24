@@ -26,7 +26,15 @@ if(isset($_SESSION["ROLE"])){
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
-$clsMyDB->strCondition = " ID And role=$_role or ID =1";
+
+if($_role==1){
+    $conditions = " ID > 0 or ID =1";
+}else{
+    $conditions = " ID > 0 And role=$_role or ID =1";
+}
+
+$clsMyDB->strCondition = $conditions;
+
 $objSelect = $clsMyDB->fncReturnResult();
 
     while($row = @mysql_fetch_array($objSelect)){

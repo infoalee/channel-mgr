@@ -33,14 +33,16 @@ session_start();
     <script src="vendor/jquery/jquery.js"></script>
     <link href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
     <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  
     <script>
-    
+      
+      
       var show_dashboard = function(){
           $("#baseview").empty();
           $("#baseview").load("./_view/dashboard.php?role=<? echo $_SESSION['ROLE'];?>");  
 
       }
-      var show_booing = function(){
+      var show_booking = function(){
           $("#baseview").empty('');
           $("#baseview").load("./_view/newtask.php");  
       }
