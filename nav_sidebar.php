@@ -22,7 +22,7 @@ $clsMyDB = new MySQLDB($strHost,$strDB,$strUser,$strPassword);
 if(isset($_SESSION["ROLE"])){
     $_role = $_SESSION["ROLE"];
 }else{
-    $_role = 3;
+    $_role = 1;
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
@@ -34,6 +34,7 @@ if($_role==1){
 }
 
 $clsMyDB->strCondition = $conditions;
+
 
 $objSelect = $clsMyDB->fncReturnResult();
 

@@ -14,10 +14,10 @@ echo "error2";
 }
 
 /* Test login */
-$_SESSION["LOGIN_ID"] = $tUsername;
+/*$_SESSION["LOGIN_ID"] = $tUsername;
 $_SESSION["ROLE"] = $tPassword;
 echo iconv('TIS-620', 'UTF-8','Y'); 
-exit();
+exit();*/
 /* Test login */
 
 $check_err="";//ตรวจสอบการ Error
@@ -50,6 +50,7 @@ $check_err="";//ตรวจสอบการ Error
 
 																			$_SESSION["LOGIN_OK"] = true;
 																			$_SESSION["LOGIN_ID"] = $username;
+																			$_SESSION["ROLE"] = 1;
 																			$_SESSION['loggedin_time'] = time(); 
 																			$tostrUpper = ucwords(strtoupper($username));  
 																			$tostrFUpper = ucwords(strtolower($tostrUpper)); 

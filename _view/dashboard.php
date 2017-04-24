@@ -21,10 +21,10 @@ $clsMyDB = new MySQLDB($strHost,$strDB,$strUser,$strPassword);
             <div class="row">
 
 <?
-if(isset($_GET['role'])){
-    $_role = $_GET['role'];
+if(isset($_SESSION["ROLE"])){
+    $_role = $_SESSION["ROLE"];
 }else{
-    $_role = 3;
+    $_role = 1;
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
