@@ -187,3 +187,22 @@
 .panel-silver>a:hover {
     color: #ecf0f1;
 }
+
+/* Panel Style Orange */
+.panel-orange {
+    border-color: #f39c12;
+}
+
+.panel-orange>.panel-heading {
+    border-color: #f39c12;
+    color: white;
+    background-color: #f39c12;
+}
+
+.panel-orange>a {
+    color: #f39c12;
+}
+
+.panel-orange>a:hover {
+    color: #f1c40f;
+}

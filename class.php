@@ -163,10 +163,10 @@ class ODBC
 } 
 
 	/**** Class Database ****/
-	Class MySQLDatabase
+	Class MySQLDB
 	{
 		/**** function connect to database ****/
-		function MySQLDatabase($strHost,$strDB,$strUser,$strPassword)
+		function MySQLDB($strHost,$strDB,$strUser,$strPassword)
 		{
 				$this->objConnect = mysql_connect($strHost,$strUser,$strPassword);
 				$this->DB = mysql_select_db($strDB);

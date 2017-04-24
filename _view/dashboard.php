@@ -7,7 +7,7 @@ $strHost = "127.0.0.1";
 $strDB = "ci_channel_mgt";
 $strUser = "root";
 $strPassword = "p@ssw0rd";
-$clsMyDB = new MySQLDatabase($strHost,$strDB,$strUser,$strPassword);
+$clsMyDB = new MySQLDB($strHost,$strDB,$strUser,$strPassword);
 
 ?>
     <div id="page-wrapper">
@@ -28,7 +28,7 @@ if(isset($_GET['role'])){
 }
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
-$clsMyDB->strCondition = " ID > 0 And role=" . $_role;
+$clsMyDB->strCondition = " ID > 0 "; //And role=" . $_role;
 $objSelect = $clsMyDB->fncReturnResult();
 
     while($row = @mysql_fetch_array($objSelect)){

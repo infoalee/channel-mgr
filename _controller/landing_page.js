@@ -4,6 +4,8 @@ $(function() {
         show_dashboard();
     } else if ($(location).attr('hash') == '#/booking') {
         show_booing();
+    } else if ($(location).attr('hash') == '#/dashboard') {
+        show_dashboard();
     } else if ($(location).attr('hash') == '#/calendar') {
         show_calendar();
     } else {
