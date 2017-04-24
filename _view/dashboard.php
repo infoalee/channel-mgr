@@ -5,7 +5,7 @@ $dashboard = new Dashboard;
 //**** New class database ****//
 $strHost = "127.0.0.1";
 $strDB = "ci_channel_mgt";
-$strUser = "root";
+$strUser = "ci_ch_root";
 $strPassword = "p@ssw0rd";
 $clsMyDB = new MySQLDB($strHost,$strDB,$strUser,$strPassword);
 
