@@ -47,6 +47,7 @@ $db = new ODBC();
 					$product = substr(odbc_result($rs, "CAMPAIGNCODE"),1,2);
 					$startDate = odbc_result($rs, "STARTDATE");
 					$endDate = odbc_result($rs, "ENDDATE");
+					$campType = substr(odbc_result($rs, "CAMPAIGNCODE"),1,1);
 					$N++;
 			}
         }
@@ -73,7 +74,8 @@ echo json_encode($output,JSON_FORCE_OBJECT);
 			."|".$objective
             ."|".$product
             ."|".$startDate
-            ."|".$endDate;
+            ."|".$endDate
+			."|".$campType;
 		}else{
 			echo '';
 		}

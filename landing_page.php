@@ -33,10 +33,21 @@ session_start();
     <script src="vendor/jquery/jquery.js"></script>
     <link href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
     <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+      
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="_controller/nav_sidebar.js"></script>
+  
+  <!-- Custom Theme JavaScript -->
+  <script src="dist/js/sb-admin-2.js"></script>
+  <script src="dist/js/jquery.session.js"></script>
+  <script src='_controller/landing_page.js'></script>
+  <script src="_controller/page_function.js"></script>
+
   
     <script>
-      
-      
+     
       var show_dashboard = function(){
           $("#baseview").empty();
           $("#baseview").load("./_view/dashboard.php?role=<? echo $_SESSION['ROLE'];?>");  
@@ -50,6 +61,7 @@ session_start();
           //$("#baseview").empty('');
           $("#baseview").load("./_view/calendar.php");  
       }
+      
     </script>
 
 
@@ -118,18 +130,6 @@ session_start();
 		 <!-- Modal  confrim Logout -->
 </div>
   <!-- /#wrapper -->
-
-  
-  
-  <!-- Bootstrap Core JavaScript -->
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="_controller/nav_sidebar.js"></script>
-  
-  <!-- Custom Theme JavaScript -->
-  <script src="dist/js/sb-admin-2.js"></script>
-  <script src="dist/js/jquery.session.js"></script>
-  <script src='_controller/landing_page.js'></script>
-  <script src="_controller/page_function.js"></script>
 
 
 </body>

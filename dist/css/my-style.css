@@ -221,3 +221,24 @@
 .panel-orange>a:hover {
     color: #f1c40f;
 }
+
+
+/* Panel Style Brown */
+
+.panel-brown {
+    border-color: #795548;
+}
+
+.panel-brown>.panel-heading {
+    border-color: #795548;
+    color: white;
+    background-color: #795548;
+}
+
+.panel-brown>a {
+    color: #795548;
+}
+
+.panel-brown>a:hover {
+    color: #A1887F;
+}

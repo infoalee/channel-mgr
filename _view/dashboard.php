@@ -1,4 +1,5 @@
 <script src="./_controller/dashboard.js"></script>
+
 <?
 include("../class.php");
 $dashboard = new Dashboard;
@@ -75,8 +76,8 @@ Class Dashboard {
                                 </div>
                             </div>
                         </div>
-                        <a href='" . $this->href . "' id='" . $this->contentID ."'>
-                            <div class='panel-footer'>
+                        <a class='dash-a' href='" . $this->href . "' id='" . $this->contentID ."'>
+                        <div class='panel-footer'>
                                 <span class='pull-left'>" . $this->detail . "</span>
                                 <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
                                 <div class='clearfix'></div>

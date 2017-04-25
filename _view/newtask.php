@@ -74,7 +74,7 @@
                                             <label class="control-label inline">Product :</label>
                                           </div>
                                           <div class="col-md-3 col-lg-3">
-                                            <select id="slProduct " class="form-control selectpicker inline">
+                                            <select id="slProduct" class="form-control selectpicker inline">
                                               <option value="BA">BA</option>
                                               <option value="CC">CC</option>
                                               <option value="DF">DF</option>
