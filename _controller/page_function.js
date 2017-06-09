@@ -14,7 +14,7 @@ $(document).on({
 
 
 var updateLinkActive = function(url) {
-
+alert(url);
     $('ul.nav a').removeClass('active').parent();
     var element = $('ul.nav a').filter(function() {
         return this.href == url;

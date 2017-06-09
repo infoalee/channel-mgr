@@ -8,6 +8,8 @@ $(function() {
         show_dashboard();
     } else if ($(location).attr('hash') == '#/calendar') {
         show_calendar();
+    } else if ($(location).attr('hash') == '#/manage-booking') {
+        show_manage_booking();
     } else {
         show_dashboard();
     }
@@ -21,6 +23,8 @@ $(function() {
             show_booking();
         } else if (this.hash == '#/dashboard') {
             show_dashboard();
+        } else if (this.hash == '#/manage-booking') {
+            show_manage_booking();
         } else if (this.hash == '#') {
             show_dashboard();
         }
