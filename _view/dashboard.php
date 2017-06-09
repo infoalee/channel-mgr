@@ -30,9 +30,9 @@ if(isset($_SESSION["ROLE"])){
 //**** Call to function select record ****//
 $clsMyDB->strTable = "MENU_DASHBOARD";
 if($_role==1){
-    $conditions = " ID > 0 order by ID";
+    $conditions = " ID > 0 And status = 1 order by ID";
 }else{
-    $conditions = " ID > 0 And role=" . $_role . " order by ID";
+    $conditions = " ID > 0 And status = 1 And role=" . $_role . " order by ID";
 }
 
 $clsMyDB->strCondition = $conditions;

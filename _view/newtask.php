@@ -45,6 +45,8 @@
                                             <select name="select" id="select" class="form-control selectpicker inline">
                                               <option>Targeted</option>
                                               <option>Informative</option>
+                                              <option>Informative CRM</option>
+                                              <option>Service Campaign</option>
                                               <option>Other</option>
                                             </select>
                                           </div>
