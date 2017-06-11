@@ -18,10 +18,10 @@
           </div>
           <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Striped Rows
+                            Details
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -29,8 +29,8 @@
                                 <table class="table table-striped">
                                 
                                 
-<thead><tr class="tableizer-firstrow"><th>Campaign No.</th><th>Campaign Code</th><th>Campaign Name</th><th>Contact Date</th><th># Lead</th><th>Channel</th><th>Campaign Type</th><th>Message Type</th><th>Task Status</th><th>Content Status</th><th>Edit</th></tr></thead><tbody>
- <tr><td>1-1</td><td>FCCS17604</td><td>EDM_Informative_KCredit_Card_KBank_Reward_Point_Flyer_Bonus</td><td>5 Jan 17</td><td> 300,000 </td><td> Emal </td><td>Informative</td><td>Normal</td><td>Ready</td><td>Ready</td><td>editTask  editContent</td></tr>
+<thead><tr><th>Campaign No.</th><th>Campaign Code</th><th>Campaign Name</th><th>Contact Date</th><th># Lead</th><th>Channel</th><th>Campaign Type</th><th>Message Type</th><th>Task Status</th><th>Content Status</th><th>Edit</th></tr></thead><tbody>
+ <tr><td>1-1</td><td>FCCS17604</td><td>EDM_Informative_KCredit_Card_KBank_Reward_Point_Flyer_Bonus</td><td>5 Jan 17</td><td> 300,000 </td><td> Emal </td><td>Informative</td><td>Normal</td><td>Ready</td><td>Ready</td><td><button class="btn btn-sm btn-warning">Task</button><button class="btn btn-sm btn-info">Content</button></td></tr>
  <tr><td>1-2</td><td>CDFS17362</td><td>X_Sell_TopUp_High_sms_edm_Jan2017</td><td>9 Jan 17</td><td> 150,000 </td><td> Emal </td><td>Targeted</td><td>Personalised</td><td>Pending</td><td>Waiting for Details</td><td>editTask  editContent</td></tr>
  <tr><td>1-3</td><td>CDFS17363</td><td>Up_Sell_TopUp_High_sms_edm_Jan2017 </td><td>9 Jan 17</td><td> 60,000 </td><td> Emal </td><td>Targeted</td><td>Personalised</td><td>Pending</td><td>Waiting for Details</td><td>editTask  editContent</td></tr>
  <tr><td>1-1</td><td>CCCS16297</td><td>Upsell CC Payroll Bonus 2017</td><td>18 Jan 17</td><td> 13,600 </td><td> Sms </td><td>Targeted</td><td>Personalised</td><td>Ready</td><td>Ready</td><td>editTask  editContent</td></tr>
