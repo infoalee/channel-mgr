@@ -64,8 +64,6 @@ $(document).ready(function() {
                         var campType = result[5];
                         $('#campaignName').val(name);
                         $('#slProduct').val(product);
-                        //alert("'" + product + "'");
-                        //alert($("#slProduct option:selected").text());
                         $('#campaignObj').val(objective);
                         $('#from-dt').val(startDate);
                         $('#from-dt').datepicker('update', startDate);
@@ -75,7 +73,7 @@ $(document).ready(function() {
                     }
 
                     //$('.modal-loading').hide();
-                    console.log('Search Finished');
+                    console.log('Search Finished\n' + data);
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
                     // Fail message

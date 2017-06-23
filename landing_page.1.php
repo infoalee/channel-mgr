@@ -85,7 +85,7 @@ session_start();
 
 				</div>
 				<div class="modal-body">
-				  <p class="text-warning"><span class="glyphicon glyphicon-exclamation-sign"></span> คุณต้อการออกจากระบบ หากต้องการเข้าสู่ระบบ กรุณา Login ใหม่. Are you sure?</p>
+				  <p class="text-warning"><span class="glyphicon glyphicon-exclamation-sign"></span> คุณต้องการออกจากระบบ หากต้องการเข้าสู่ระบบ กรุณา Login ใหม่. Are you sure?</p>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" id="myButtonLogoutCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>

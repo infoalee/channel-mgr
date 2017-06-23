@@ -28,7 +28,7 @@ $check_err="";//ตรวจสอบการ Error
 			$pass = $tPassword;//$_POST["password"];
 
 				if($username !=null and $pass !=null){// check username  And password not null 2
-							$server = " 10.209.60.60"; //dc1-nu
+							$server = "kasikornbank.com"; //dc1-nu
 							$user = $username."@kasikornbank.com";
 							// connect to active directory
 							$ad = ldap_connect($server);

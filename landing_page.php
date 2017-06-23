@@ -61,8 +61,8 @@ session_start();
           //$("#baseview").empty('');
           $("#baseview").load("./_view/calendar.php");  
       }
-      var show_manage_booking = function(){
-          $("#baseview").empty('');
+      var show_mgr_booking = function(){
+          //$("#baseview").empty('');
           $("#baseview").load("./_view/mgr_booking.php");  
       }
       
